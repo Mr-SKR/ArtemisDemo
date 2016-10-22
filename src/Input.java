@@ -51,10 +51,12 @@ public class Input {
 		frame.getContentPane().setLayout(null);
 		
 		textField = new JTextField(); // User Input Field
-		textField.setBounds(85, 243, 326, 42);
+		textField.setBackground(new Color(204, 255, 153));
+		textField.setBounds(76, 286, 326, 33);
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		Background.setIcon(new ImageIcon(img));
 		frame.getContentPane().add(Background);
+		sqlconnect.sqlcon();
 	}
 }

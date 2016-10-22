@@ -60,12 +60,8 @@ public class Alpha {
 		lblWelcome.setBackground(new Color(135, 206, 250));
 		lblWelcome.setForeground(Color.WHITE);
 		lblWelcome.setFont(new Font("Tahoma", Font.BOLD, 33));
-		lblWelcome.setBounds(176, 180, 161, 78);
+		lblWelcome.setBounds(153, 47, 161, 78);
 		frame.getContentPane().add(lblWelcome);
-		
-		JLabel lblArtemis = new JLabel("Artemis_v0.1"); // Version Label
-		lblArtemis.setBounds(410, 311, 79, 29);
-		frame.getContentPane().add(lblArtemis);
 		
 		JButton btnNewButton = new JButton("Continue"); // Button On First Screen
 		btnNewButton.setSelectedIcon(null);
@@ -79,15 +75,21 @@ public class Alpha {
 				
 			}
 		});
-		btnNewButton.setBackground(new Color(224, 255, 255));
+		btnNewButton.setBackground(new Color(204, 153, 255));
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 21));
-		btnNewButton.setBounds(186, 239, 136, 42);
+		btnNewButton.setBounds(10, 288, 128, 29);
 		frame.getContentPane().add(btnNewButton);
 		
 		
 		JLabel Background = new JLabel("Welcome"); // Background Label
 		Background.setBounds(0, 0, 489, 340);
 		Image img = new ImageIcon(this.getClass().getResource("/Background.png")).getImage();
+		
+		JButton btnNewButton_1 = new JButton("Behavo");
+		btnNewButton_1.setBackground(new Color(153, 153, 255));
+		btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 19));
+		btnNewButton_1.setBounds(347, 288, 132, 29);
+		frame.getContentPane().add(btnNewButton_1);
 		Background.setIcon(new ImageIcon(img));
 		frame.getContentPane().add(Background);
 		
