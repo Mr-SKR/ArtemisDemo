@@ -1,3 +1,4 @@
+//Akhil Krishna 10:40 AM Sunday, 23 October 2016 (IST)
 import java.awt.EventQueue;
 
 
@@ -14,36 +15,36 @@ import javax.swing.JOptionPane;
 
 
 public class sqlconnect {
-public static int sqlcon()
-	{
-	
-	
-	
+	public static int ret=0;
+public static int sqlcon(String str)
+ {
 		try
 		{
 			Class.forName("com.mysql.jdbc.Driver");  
-			  
-			Connection con=DriverManager.getConnection( "jdbc:mysql://localhost:3306/XXXX","XXXXX","XXXXXXXXXX");
-			//JOptionPane.showMessageDialog(null,con); //debug code
-			 String sql = "SELECT * FROM "; //used for debugging
+			Connection con=DriverManager.getConnection( "jdbc:mysql://localhost:3306/artemis","root","3jy6bDMLRFq8uVzD");
+			//JOptionPane.showMessageDialog(null,"sql"); //debug code
+			 String sql = "SELECT * FROM emoba where EmoWord='"+str+"'"; 
 			 Statement stmt = con.createStatement();
 			 ResultSet rs = stmt.executeQuery(sql);
+			 //JOptionPane.showMessageDialog(null,sql);
 		      // Extract data from result set
 		      while(rs.next()){
 		         //Retrieve data
+		    	  int emoval  = rs.getInt("emoval");
+		    	  ret=emoval;		    	  
 		      }	    
 		      rs.close(); //close db connection
 		     
 		}
 		   catch(Exception e)
 			{
-			   //JOptionPane.showMessageDialog(null,e.getMessage());
+			  
 			}
 		finally
 		{
 			 
 		}
-		return 0; //to return something something;
+		return ret;//to return something something;
 			
 	}
 }
