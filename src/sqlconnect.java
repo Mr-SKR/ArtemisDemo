@@ -21,7 +21,7 @@ public static int sqlcon(String str)
 		try
 		{
 			Class.forName("com.mysql.jdbc.Driver");  
-			Connection con=DriverManager.getConnection( "jdbc:mysql://localhost:3306/artemis","root","3jy6bDMLRFq8uVzD");
+			Connection con=DriverManager.getConnection( "jdbc:mysql://localhost:3306/X","X","X");
 			//JOptionPane.showMessageDialog(null,"sql"); //debug code
 			 String sql = "SELECT * FROM emoba where EmoWord='"+str+"'"; 
 			 Statement stmt = con.createStatement();
