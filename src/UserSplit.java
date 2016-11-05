@@ -48,19 +48,28 @@ public class UserSplit {
    public static int splittext(String str)
    {  
 	   int emoval=0;
-	   int emovalsum=0;
-	   int count=0;
-      for (String retval: str.split(" "))
+   	   int emovalsum=0;
+   	   int count=0;
+   	   String str1 = str.replaceAll("[^a-zA-Z]+"," ");
+   	   //JOptionPane.showMessageDialog(null,str1);
+	   
+      for (String retval: str1.split(" "))
       {
     	  emoval=sqlconnect.sqlcon(retval);
+    	  if(emoval>0)
+    	  {
     	  emovalsum+=emoval;
-    	  count++;   	 
-      }    
+    	  count++;
+    	  }
+      } 
+      if( emovalsum>0)
+      {
       emovalsum=emovalsum/count;   
+      }
       //JOptionPane.showMessageDialog(null,emovalsum);
       return emovalsum;
-     
-}
+   }
+  
   
    
 }

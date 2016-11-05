@@ -60,7 +60,7 @@ public class Alpha {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JLabel lblWelcome = new JLabel("Hi There!\r\n");   //Initial Text Label
+		JLabel lblWelcome = new JLabel("EMOTIO\r\n");   //Initial Text Label
 		lblWelcome.setHorizontalAlignment(SwingConstants.CENTER);
 		lblWelcome.setBackground(new Color(135, 206, 250));
 		lblWelcome.setForeground(Color.WHITE);
@@ -74,6 +74,7 @@ public class Alpha {
 		Image img = new ImageIcon(this.getClass().getResource("/Background.png")).getImage();
 		
 		textField = new JTextField(); // User Input Field
+		textField.setHorizontalAlignment(SwingConstants.CENTER);
 		textField.setForeground(new Color(255, 255, 255));
 		textField.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent Arg0)
