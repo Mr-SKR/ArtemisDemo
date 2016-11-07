@@ -1,4 +1,6 @@
 //Akhil Krishna 10:40 AM Sunday, 23 October 2016 (IST)
+// Sensitive Data Marked as XXXX
+// Insensitive Data also sometimes Marked as XXXX
 import java.awt.EventQueue;
 
 
@@ -21,9 +23,9 @@ import javax.swing.JOptionPane;
 		try
 		{
 			Class.forName("com.mysql.jdbc.Driver");  
-			Connection con=DriverManager.getConnection( "jdbc:mysql://localhost:3306/artemis","root","3jy6bDMLRFq8uVzD");
+			Connection con=DriverManager.getConnection( "jdbc:mysql://localhost:3306/XXXX","XXXX","XXXXXX");
 			//JOptionPane.showMessageDialog(null,"sql"); //debug point
-			 String sql = "SELECT * FROM emoba where EmoWord='"+str+"'"; 
+			 String sql = "SELECT * FROM XXXXX where XXXXX='"+str+"'"; 
 			 Statement stmt = con.createStatement();
 			 ResultSet rs = stmt.executeQuery(sql);
 			 //JOptionPane.showMessageDialog(null,sql); //debug point
@@ -31,7 +33,7 @@ import javax.swing.JOptionPane;
 		      // Extract data from result set
 		      while(rs.next()){
 		         //Retrieve data
-		    	  int emoval  = rs.getInt("emoval");
+		    	  int emoval  = rs.getInt("XXXX");
 		    	  ret=emoval;		    	  
 		      }	    
 		      rs.close(); //close db connection

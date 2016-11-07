@@ -51,9 +51,7 @@ public class UserSplit {
    	   int emovalsum=0;
    	   int count=0;
    	   String str1 = str.replaceAll("[^a-zA-Z]+"," ");
-   	   //JOptionPane.showMessageDialog(null,str1);
-	   
-      for (String retval: str1.split(" "))
+      for (String retval: str.toLowerCase().split(" "))
       {
     	  emoval=sqlconnect.sqlcon(retval);
     	  if(emoval>0)
@@ -66,7 +64,7 @@ public class UserSplit {
       {
       emovalsum=emovalsum/count;   
       }
-      //JOptionPane.showMessageDialog(null,emovalsum);
+     // JOptionPane.showMessageDialog(null,emovalsum);
       return emovalsum;
    }
   
